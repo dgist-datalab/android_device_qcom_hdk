@@ -924,3 +924,11 @@ endif #ifneq "$(wildcard vendor/qcom/proprietary/commonsys/bt/bt_adv_audio)" ""
 
 # Include GMS, Modules, and Pixel features.
 $(call inherit-product, vendor/google/gms/config.mk)
+
+ifneq ($(wildcard vendor/google/modules/.),)
+# Flatten APEXs for performance
+OVERRIDE_TARGET_FLATTEN_APEX := true
+# This needs to be specified explicitly to override ro.apex.updatable=true from
+# # prebuilt vendors, as init reads /product/build.prop after /vendor/build.prop
+PRODUCT_PRODUCT_PROPERTIES += ro.apex.updatable=false
+endif
