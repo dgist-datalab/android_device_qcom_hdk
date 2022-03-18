@@ -141,11 +141,13 @@ BOARD_SUPER_PARTITION_SIZE := 12884901888
 BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
 BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := system system_ext product
 BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 6438256640
-BOARD_EXT4_SHARE_DUP_BLOCKS := true
 ifeq ($(ENABLE_AB), true)
 AB_OTA_PARTITIONS ?= system system_ext product vbmeta_system pvmfw
 endif
 endif
+
+# Allow R/W remount
+BOARD_EXT4_SHARE_DUP_BLOCKS := false
 ###### Dynamic Partition Handling ####
 
 # Use sha256 for dm-verity partitions
