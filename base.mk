@@ -921,3 +921,6 @@ else
     $(warning bt_adv_audio dir is not present)
     SOONG_CONFIG_bredr_vs_btadva_bredr_or_btadva := bredr
 endif #ifneq "$(wildcard vendor/qcom/proprietary/commonsys/bt/bt_adv_audio)" ""
+
+# Include GMS, Modules, and Pixel features.
+$(call inherit-product, vendor/google/gms/config.mk)
