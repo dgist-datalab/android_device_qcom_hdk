@@ -37,4 +37,11 @@
        <item>"wifi_br0"</item>
    </string-array>
 
+    <!-- Disable apps built from userdebug vendor image -->
+    <string-array name="config_disableApksUnlessMatchedSku_apk_list" translatable="false">
+        <item>com.qualcomm.qti.biometrics.fingerprint.qfpcalibration</item>
+        <item>com.qualcomm.qti.sensors.qsensortest</item>
+        <item>com.qualcomm.qti.usta</item>
+    </string-array>
+
 </resources>
