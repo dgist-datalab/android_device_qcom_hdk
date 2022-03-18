@@ -100,6 +100,7 @@ TARGET_DEFINES_DALVIK_HEAP := true
 $(call inherit-product, device/qcom/qssi/common64.mk)
 
 #Inherit all except heap growth limit from phone-xhdpi-2048-dalvik-heap.mk
+#This is overridden from /vendor/build.prop
 PRODUCT_PROPERTY_OVERRIDES  += \
      dalvik.vm.heapstartsize=8m \
      dalvik.vm.heapsize=512m \
