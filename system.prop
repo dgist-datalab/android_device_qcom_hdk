@@ -169,8 +169,5 @@ arm64.memtag.process.system_server=off
 # Disable blur on app launch
 ro.launcher.blur.appLaunch=0
 
-ro.surface_flinger.refresh_rate_switching=true
-ro.surface_flinger.set_idle_timer_ms=80
-ro.surface_flinger.set_touch_timer_ms=200
-ro.surface_flinger.set_display_power_timer_ms=1000
-ro.surface_flinger.use_content_detection_for_refresh_rate=true
+# Force constant 120 Hz
+ro.surface_flinger.refresh_rate_switching=false
