@@ -3,9 +3,32 @@
 
     <!-- Disable apps built from userdebug vendor image -->
     <string-array name="config_disableApksUnlessMatchedSku_apk_list" translatable="false">
+        <item>com.android.mms</item>
+        <item>com.android.music</item>
+        <item>com.android.protips</item>
+        <item>com.android.soundrecorder</item>
+        <item>com.caf.fmradio</item>
+        <item>com.qti.msdc_ui</item>
+        <item>com.qti.qualcomm.datastatusnotification</item>
+        <item>com.qti.qualcomm.mstatssystemservice</item>
+        <item>com.qti.snapdragon.qdcm_ff</item>
+        <item>com.qti.snapdragon.qdcm_mobile</item>
+        <item>com.qualcomm.qct.dlt</item>
         <item>com.qualcomm.qti.biometrics.fingerprint.qfpcalibration</item>
+        <item>com.qualcomm.qti.qccauthmgr</item>
+        <item>com.qualcomm.qti.qccnetstat</item>
+        <item>com.qualcomm.qti.qcolor</item>
+        <item>com.qualcomm.qti.qdma</item>
+        <item>com.qualcomm.qti.ridemodeaudio</item>
+        <item>com.qualcomm.qti.seccamservice</item>
         <item>com.qualcomm.qti.sensors.qsensortest</item>
+        <item>com.qualcomm.qti.server.qtiwifi</item>
+        <item>com.qualcomm.qti.services.secureui</item>
+        <item>com.qualcomm.qti.services.systemhelper</item>
+        <item>com.qualcomm.qti.ssmeditor</item>
+        <item>com.qualcomm.qti.sva</item>
         <item>com.qualcomm.qti.usta</item>
+        <item>org.codeaurora.dialer</item>
     </string-array>
 
     <!-- The default refresh rate for a given device. Change this value to set a higher default
