@@ -676,10 +676,8 @@ PRODUCT_PACKAGES := \
     Camera \
     CertInstaller \
     DrmProvider \
-    Email \
     Gallery2 \
     LatinIME \
-    Music \
     netutils-wrapper-1.0 \
     Provision \
     Protips \
