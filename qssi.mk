@@ -252,7 +252,8 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 PRODUCT_PACKAGES += \
     HDKResOverlay \
-    HDKSystemUIOverlay
+    HDKSystemUIOverlay \
+    HDKSettingsProviderOverlay
 
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE:=true
 
