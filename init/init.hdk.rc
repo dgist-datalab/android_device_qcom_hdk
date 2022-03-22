@@ -1,0 +1,5 @@
+on post-fs
+    mount_all /system/etc/fstab.unencrypted
+
+on late-fs
+    mount_all /system/etc/fstab.unencrypted.late-fs --late
