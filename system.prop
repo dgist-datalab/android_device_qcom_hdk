@@ -173,3 +173,6 @@ ro.surface_flinger.refresh_rate_switching=false
 
 # Enable Navigation gestures
 ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural
+
+# Disable RescueParty due to high risk of data loss
+persist.sys.disable_rescue=true
