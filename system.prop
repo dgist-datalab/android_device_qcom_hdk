@@ -177,3 +177,6 @@ ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural
 
 # Disable RescueParty due to high risk of data loss
 persist.sys.disable_rescue=true
+
+# Set density
+ro.sf.lcd_density=360
