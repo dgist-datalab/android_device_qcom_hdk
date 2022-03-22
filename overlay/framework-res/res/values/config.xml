@@ -59,4 +59,8 @@
         <item>-1</item>
     </integer-array>
 
+   <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
+       autodetected from the Configuration. -->
+   <bool name="config_showNavigationBar">true</bool>
+
 </resources>
