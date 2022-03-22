@@ -264,7 +264,8 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 PRODUCT_PACKAGES += \
     HDKResOverlay \
-    HDKSystemUIOverlay
+    HDKSystemUIOverlay \
+    HDKSettingsProviderOverlay
 
 #Enable vndk-sp Libraries
 PRODUCT_PACKAGES += vndk_package
