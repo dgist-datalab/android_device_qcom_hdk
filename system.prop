@@ -170,3 +170,6 @@ ro.launcher.blur.appLaunch=0
 
 # Force constant 120 Hz
 ro.surface_flinger.refresh_rate_switching=false
+
+# Enable Navigation gestures
+ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural
