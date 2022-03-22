@@ -1,0 +1,15 @@
+prebuilt_etc {
+    name: "fstab.unencrypted",
+    src: "fstab.unencrypted",
+}
+
+prebuilt_etc {
+    name: "fstab.unencrypted.late-fs",
+    src: "fstab.unencrypted.late-fs",
+}
+
+prebuilt_etc {
+    name: "init.hdk.rc",
+    src: "init.hdk.rc",
+    sub_dir: "init",
+}
