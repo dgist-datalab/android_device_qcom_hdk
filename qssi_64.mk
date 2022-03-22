@@ -262,10 +262,6 @@ PRODUCT_FULL_TREBLE_OVERRIDE := true
 PRODUCT_VENDOR_MOVE_ENABLED := true
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
-ifneq ($(strip $(TARGET_USES_RRO)),true)
-DEVICE_PACKAGE_OVERLAYS += device/qcom/qssi_64/overlay
-endif
-
 
 #Enable vndk-sp Libraries
 PRODUCT_PACKAGES += vndk_package
