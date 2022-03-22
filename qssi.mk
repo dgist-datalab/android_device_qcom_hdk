@@ -254,7 +254,8 @@ PRODUCT_VENDOR_MOVE_ENABLED := true
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 PRODUCT_PACKAGES += \
-    HDKResOverlay
+    HDKResOverlay \
+    HDKSystemUIOverlay
 
 #Enable vndk-sp Libraries
 PRODUCT_PACKAGES += vndk_package
