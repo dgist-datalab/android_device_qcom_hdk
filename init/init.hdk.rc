@@ -3,6 +3,8 @@ on post-fs
 
 on late-fs
     mount_all /system/etc/fstab.unencrypted.late-fs --late
+    mkdir /data/ext 0755 root root
+    mount ext4 /dev/block/by-name/userext /data/ext
 
 on boot
     chown system /dev/block/bootdevice/by-name/frp
