@@ -7,3 +7,8 @@ on late-fs
 on boot
     chown system /dev/block/bootdevice/by-name/frp
     chown system /dev/block/nvme0n1p5
+
+# Disable update_engine
+service update_engine /system/bin/true
+    oneshot
+    disabled
