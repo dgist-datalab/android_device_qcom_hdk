@@ -270,6 +270,9 @@ PRODUCT_PACKAGES += \
     fstab.unencrypted.late-fs \
     init.hdk.rc
 
+PRODUCT_COPY_FILES += \
+    device/qcom/qssi/prebuilt/busybox:$(TARGET_COPY_OUT_SYSTEM)/bin/busybox
+
 TARGET_USES_QCOM_DISPLAY_BSP := true
 
 ifeq ($(TARGET_USES_NEW_ION),true)
