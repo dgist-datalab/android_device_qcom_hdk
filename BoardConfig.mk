@@ -25,6 +25,8 @@ TARGET_KERNEL_DLKM_DISABLE := true
 # create symlink system/lib/modules -> system_dlkm/lib/modules
 CREATE_SYSTEM_DLKM_SYMLINK := true
 
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 -include $(QCPATH)/common/msmnile/BoardConfigVendor.mk
 
 USE_OPENGL_RENDERER := true
