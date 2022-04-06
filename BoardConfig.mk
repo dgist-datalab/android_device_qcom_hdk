@@ -29,6 +29,8 @@ TARGET_NO_KERNEL := true
 # Disable DLKMs compilation for lunch qssi builds.
 TARGET_KERNEL_DLKM_DISABLE := true
 
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 -include $(QCPATH)/common/msmnile/BoardConfigVendor.mk
 
 USE_OPENGL_RENDERER := true
