@@ -1,10 +1,10 @@
-$(call inherit-product, device/qcom/qssi/base.mk)
+$(call inherit-product, device/qcom/qssi_64/base.mk)
 
 # For PRODUCT_COPY_FILES, the first instance takes precedence.
 # Since we want use QC specific files, we should inherit
 # device-vendor.mk first to make sure QC specific files gets installed.
 $(call inherit-product-if-exists, $(QCPATH)/common/config/device-vendor-qssi.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 PRODUCT_BRAND := qcom
@@ -24,12 +24,12 @@ endif
 
 # whitelisted app
 PRODUCT_COPY_FILES += \
-    device/qcom/qssi/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml \
-    device/qcom/qssi/qti_whitelist_system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_whitelist_system_ext.xml
+    device/qcom/qssi_64/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml \
+    device/qcom/qssi_64/qti_whitelist_system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_whitelist_system_ext.xml
 
 PRODUCT_COPY_FILES += \
-    device/qcom/qssi/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml \
-    device/qcom/qssi/privapp-permissions-qti-system-ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-qti-system-ext.xml
+    device/qcom/qssi_64/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml \
+    device/qcom/qssi_64/privapp-permissions-qti-system-ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-qti-system-ext.xml
 
 PRODUCT_PRIVATE_KEY := vendor/qcom/opensource/core-utils/build/qcom.key
 
