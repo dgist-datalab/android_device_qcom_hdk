@@ -1,5 +1,6 @@
 on post-fs
     mount_all /system/etc/fstab.unencrypted
+    setprop service.adb.root 1
 
 on late-fs
     mount_all /system/etc/fstab.unencrypted.late-fs --late
