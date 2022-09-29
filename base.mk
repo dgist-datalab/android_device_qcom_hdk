@@ -521,11 +521,6 @@ MEDIA_PROFILES := media_profiles.xml
 MM_CORE := libmm-omxcore
 MM_CORE += libOmxCore
 
-#WFD
-MM_WFD := libwfdaac
-MM_WFD := libwfdaac_vendor
-
-
 #MM_VIDEO
 MM_VIDEO := ast-mm-vdec-omx-test
 MM_VIDEO += beat
@@ -769,7 +764,6 @@ PRODUCT_PACKAGES += $(LIBPOWER)
 PRODUCT_PACKAGES += $(LOC_API)
 PRODUCT_PACKAGES += $(MEDIA_PROFILES)
 PRODUCT_PACKAGES += $(MM_CORE)
-PRODUCT_PACKAGES += $(MM_WFD)
 PRODUCT_PACKAGES += $(MM_VIDEO)
 PRODUCT_PACKAGES += $(OPENCORE)
 PRODUCT_PACKAGES += $(PPP)
@@ -818,6 +812,9 @@ PRODUCT_PACKAGES += libhealthd.msm
 #Add init.qcom.test.rc to PRODUCT_PACKAGES_DEBUG list
 PRODUCT_PACKAGES_DEBUG += init.qcom.test.rc
 PRODUCT_PACKAGES_DEBUG += init.qcom.debug.sh
+
+#enable qesdk commandline tool in debug mode
+PRODUCT_PACKAGES_DEBUG += qesdkcmdline
 
 #NANOPB_LIBRARY_NAME := libnanopb-c-2.8.0
 

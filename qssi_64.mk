@@ -5,6 +5,9 @@ TARGET_BOARD_PLATFORM := qssi
 TARGET_BOARD_SUFFIX := _64
 TARGET_BOOTLOADER_BOARD_NAME := qssi_64
 
+#Flag to Enable 64 bit only configuration
+TARGET_SUPPORTS_64_BIT_ONLY := true
+
 # Skip VINTF checks for kernel configs since we do not have kernel source
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 
@@ -43,7 +46,7 @@ BOARD_AVB_ENABLE := true
 
 # Retain the earlier default behavior i.e. ota config (dynamic partition was disabled if not set explicitly), so set
 # SHIPPING_API_LEVEL to 28 if it was not set earlier (this is generally set earlier via build.sh per-target)
-SHIPPING_API_LEVEL := 31
+SHIPPING_API_LEVEL := 33
 
 $(call inherit-product-if-exists, vendor/qcom/defs/product-defs/system/cne_url*.mk)
 
@@ -97,6 +100,7 @@ TARGET_USES_NEW_ION := true
 ENABLE_AB ?= true
 
 TARGET_DEFINES_DALVIK_HEAP := true
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, device/qcom/qssi_64/common64.mk)
 
 #Inherit all except heap growth limit from phone-xhdpi-2048-dalvik-heap.mk
@@ -275,9 +279,9 @@ else
 AUDIO_FEATURE_ENABLED_DLKM := false
 endif
 
-ifeq ($(ENABLE_VIRTUAL_AB), true)
-    $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
-endif
+# Enable virtual A/B compression
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/android_t_baseline.mk)
+PRODUCT_VIRTUAL_AB_COMPRESSION_METHOD := gz
 
 # Include mainline components and qssi_64 whitelist
 ifeq (true,$(call math_gt_or_eq,$(SHIPPING_API_LEVEL),29))
