@@ -13,6 +13,7 @@
         <item>com.qti.qualcomm.mstatssystemservice</item>
         <item>com.qti.snapdragon.qdcm_ff</item>
         <item>com.qti.snapdragon.qdcm_mobile</item>
+        <item>com.qti.telephonysettings</item>
         <item>com.qualcomm.qct.dlt</item>
         <item>com.qualcomm.qti.biometrics.fingerprint.qfpcalibration</item>
         <item>com.qualcomm.qti.qccauthmgr</item>
