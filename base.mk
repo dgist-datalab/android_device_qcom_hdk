@@ -933,7 +933,7 @@ PRODUCT_PRODUCT_PROPERTIES += ro.apex.updatable=false
 endif
 
 ifeq ($(TARGET_FLATTEN_APEX), false)
-$(call inherit-product-if-exists, vendor/google/modules/build/mainline_modules_s.mk)
+$(call inherit-product-if-exists, vendor/google/modules/build/mainline_modules_t.mk)
 else
-$(call inherit-product-if-exists, vendor/google/modules/build/mainline_modules_s_flatten_apex.mk)
+$(call inherit-product-if-exists, vendor/google/modules/build/mainline_modules_t_flatten_apex.mk)
 endif
