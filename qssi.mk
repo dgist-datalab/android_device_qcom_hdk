@@ -159,8 +159,6 @@ endif
 PRODUCT_PACKAGES += android.hardware.media.omx@1.0-impl
 
 # Audio configuration file
--include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/qssi/qssi.mk
--include $(TOPDIR)vendor/qcom/opensource/commonsys/audio/configs/qssi/qssi.mk
 AUDIO_FEATURE_ENABLED_SVA_MULTI_STAGE := true
 USE_LIB_PROCESS_GROUP := true
 
@@ -292,9 +290,5 @@ ifeq (true,$(call math_gt_or_eq,$(SHIPPING_API_LEVEL),29))
   PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := true
 endif
 
-###################################################################################
-# This is the End of target.mk file.
-# Now, Pickup other split product.mk files:
-###################################################################################
-$(call inherit-product-if-exists, vendor/qcom/defs/product-defs/system/*.mk)
-###################################################################################
+# QTI Components
+TARGET_COMMON_QTI_COMPONENTS := all
