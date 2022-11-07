@@ -922,7 +922,6 @@ endif #ifneq "$(wildcard vendor/qcom/proprietary/commonsys/bt/bt_adv_audio)" ""
 
 # Include GMS, Modules, and Pixel features.
 $(call inherit-product, vendor/google/gms/config.mk)
-$(call inherit-product, vendor/google/pixel/config.mk)
 
 ifneq ($(wildcard vendor/google/modules/.),)
 # Flatten APEXs for performance
