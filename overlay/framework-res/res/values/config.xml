@@ -26,6 +26,7 @@
         <item>com.qualcomm.qti.server.qtiwifi</item>
         <item>com.qualcomm.qti.services.secureui</item>
         <item>com.qualcomm.qti.services.systemhelper</item>
+        <item>com.qualcomm.qti.smq</item>
         <item>com.qualcomm.qti.ssmeditor</item>
         <item>com.qualcomm.qti.sva</item>
         <item>com.qualcomm.qti.usta</item>
