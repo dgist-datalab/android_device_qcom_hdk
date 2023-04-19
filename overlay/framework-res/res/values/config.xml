@@ -31,6 +31,9 @@
         <item>com.qualcomm.qti.sva</item>
         <item>com.qualcomm.qti.usta</item>
         <item>org.codeaurora.dialer</item>
+        <!-- Disable Android System Intelligence as it's prone to malfunction -->
+        <item>com.google.android.as</item>
+        <item>com.google.android.as.oss</item>
     </string-array>
 
     <!-- The default refresh rate for a given device. Change this value to set a higher default
