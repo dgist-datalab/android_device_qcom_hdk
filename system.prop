@@ -183,3 +183,6 @@ ro.sf.lcd_density=360
 
 # Disable incfs to reduce network variables
 ro.incremental.enable=false
+
+# Disable logd to forward kernel logs to logcat
+ro.logd.kernel=false
