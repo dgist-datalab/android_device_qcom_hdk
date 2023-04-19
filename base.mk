@@ -924,3 +924,6 @@ endif #ifneq "$(wildcard vendor/qcom/proprietary/commonsys/bt/bt_adv_audio)" ""
 $(call inherit-product, vendor/google/gms/config.mk)
 $(call inherit-product, vendor/google/pixel/config.mk)
 
+# Manually enable ro.apex.updatable to /product as we don't want to change /vendor
+PRODUCT_PRODUCT_PROPERTIES += ro.apex.updatable=true
+$(call inherit-product, vendor/google/modules/build/mainline_modules.mk)
