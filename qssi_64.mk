@@ -5,6 +5,9 @@ TARGET_BOARD_PLATFORM := qssi
 TARGET_BOARD_SUFFIX := _64
 TARGET_BOOTLOADER_BOARD_NAME := qssi_64
 
+# Opt out of 16K alignment changes
+PRODUCT_MAX_PAGE_SIZE_SUPPORTED := 4096
+
 #Flag to Enable 64 bit only configuration
 TARGET_SUPPORTS_64_BIT_ONLY := true
 
