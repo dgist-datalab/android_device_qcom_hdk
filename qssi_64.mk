@@ -90,6 +90,10 @@ BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 2
 endif
 #### Dynamic Partition Handling
 
+PRODUCT_PRODUCT_PROPERTIES += \
+    remote_provisioning.enable_rkpd=true \
+    remote_provisioning.hostname=remoteprovisioning.googleapis.com \
+
 PRODUCT_SOONG_NAMESPACES += \
     hardware/google/av \
     hardware/google/interfaces
@@ -300,6 +304,10 @@ endif
 
 # Enable support for APEX updates
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+
+#enable virtualization service, please verify if virtualization needs to be updated
+#for low ram targets
+$(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk)
 
 ###################################################################################
 # This is the End of target.mk file.
