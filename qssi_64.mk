@@ -309,6 +309,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 #for low ram targets
 $(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk)
 
+# Enable allowlist for several aosp packages that should not be scanned in a "stopped" state
+# Some CTS test case failed after enabling feature config_stopSystemPackagesByDefault
+PRODUCT_PACKAGES += initial-package-stopped-states-aosp.xml
+
 ###################################################################################
 # This is the End of target.mk file.
 # Now, Pickup other split product.mk files:
