@@ -144,6 +144,8 @@ TARGET_USES_NQ_NFC := true
 PRODUCT_CHARACTERISTICS := nosdcard
 BOARD_FRP_PARTITION_NAME := frp
 
+PRODUCT_PACKAGES += qspa.rc qspa_default.rc
+
 #Android EGL implementation
 PRODUCT_PACKAGES += libGLES_android
 PRODUCT_PACKAGES += fsck.exfat
