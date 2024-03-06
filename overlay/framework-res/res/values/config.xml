@@ -24,12 +24,14 @@
         <item>com.qualcomm.qti.seccamservice</item>
         <item>com.qualcomm.qti.sensors.qsensortest</item>
         <item>com.qualcomm.qti.server.qtiwifi</item>
+        <item>com.qualcomm.qti.server.wigigapp</item>
         <item>com.qualcomm.qti.services.secureui</item>
         <item>com.qualcomm.qti.services.systemhelper</item>
         <item>com.qualcomm.qti.smq</item>
         <item>com.qualcomm.qti.ssmeditor</item>
         <item>com.qualcomm.qti.sva</item>
         <item>com.qualcomm.qti.usta</item>
+        <item>com.quicinc.voiceassistant.reference</item>
         <item>org.codeaurora.dialer</item>
         <!-- Disable Android System Intelligence as it's prone to malfunction -->
         <item>com.google.android.as</item>
