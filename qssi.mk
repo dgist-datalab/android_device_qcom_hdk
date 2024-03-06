@@ -103,7 +103,7 @@ TARGET_USES_NEW_ION := true
 ENABLE_AB ?= true
 
 TARGET_DEFINES_DALVIK_HEAP := true
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, device/qcom/qssi/common64.mk)
 
 #Inherit all except heap growth limit from phone-xhdpi-2048-dalvik-heap.mk
@@ -115,6 +115,13 @@ PRODUCT_PROPERTY_OVERRIDES  += \
      dalvik.vm.heapminfree=512k \
      dalvik.vm.heapmaxfree=8m
 
+# Explicitly define 64bo
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.product.cpu.abilist=arm64-v8a \
+    ro.product.cpu.abilist32= \
+    ro.product.cpu.abilist64=arm64-v8a \
+    ro.zygote=zygote64 \
+    dalvik.vm.dex2oat64.enabled=true
 
 PRODUCT_NAME := $(VENDOR_QTI_DEVICE)
 PRODUCT_DEVICE := $(VENDOR_QTI_DEVICE)
