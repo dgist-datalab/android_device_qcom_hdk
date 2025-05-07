@@ -281,6 +281,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/qcom/qssi/prebuilt/busybox:$(TARGET_COPY_OUT_SYSTEM)/bin/busybox
 
+PRODUCT_COPY_FILES += \
+    device/qcom/qssi/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
+
 TARGET_USES_QCOM_DISPLAY_BSP := true
 
 ifeq ($(TARGET_USES_NEW_ION),true)

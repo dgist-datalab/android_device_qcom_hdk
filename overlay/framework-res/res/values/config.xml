@@ -71,4 +71,9 @@
        autodetected from the Configuration. -->
    <bool name="config_showNavigationBar">true</bool>
 
+   <string name="config_bodyFontFamily">google-sans-text</string>
+   <string name="config_bodyFontFamilyMedium">google-sans-text-medium</string>
+   <string name="config_headlineFontFamily">google-sans</string>
+   <string name="config_headlineFontFamilyMedium">google-sans-medium</string>
+
 </resources>
